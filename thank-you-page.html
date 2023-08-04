@@ -6,28 +6,33 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Checkout :: Login</title>
-    <link rel="shortcut icon" href="./image/favicon-istpay.png" type="image/x-icon">
+    <!-- Mudar a URL com a automação necessária -->
+    <title>Página de obrigado</title>
+    <link rel="shortcut icon" href="./assets/favicon-istpay.png" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-            tailwind.config = {
-                theme: {
-                    extend: {
-                        colors: {
-                            istpay: {
-                                laranja: '#FF651E',
-                                escuro: '#f9f9f9',
-                                branco: '#FFFFFF',
-                                hover: '#EA4A00'
-                            },
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        istpay: {
+                            laranja: '#FF651E',
+                            escuro: '#f9f9f9',
+                            branco: '#FFFFFF',
+                            hover: '#EA4A00'
                         },
-                        fontFamily: {
-                            inter: ['Inter', 'sans-serif']    
-                        },
-                    }
+
+                        cor: {
+                                verde: '#05a93d'
+                        }
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif']    
+                    },
                 }
             }
-        </script>
+        }
+    </script>
 
 </head>
 
@@ -50,26 +55,11 @@
                 </div>
             </div>
         </nav>
-        
-
-        <div class="container d-flex justify-content-between">
-            <!-- <a href="javascript:void(0)" class="holder-logo  pull-left mr30 mt-3">
-                        <img src="https://img.icons8.com/cute-clipart/54/000000/shop.png" alt="">
-                 </a> -->
-                    <div>
-                        <div class="inner-header">
-                            
-                        </div>
-                    </div>
-                </div>
     </header>
 
-    <div class="max-w-xl">
-        <h1 class="text-sm font-semibold uppercase tracking-wide text-blue-600">Thank you</h1>
-        <h1 class="mt-2 text-4xl font-extrabold tracking-tight sm:text-5xl">Parabéns pela sua escolha!</h1>
-        <p class="mt-2 text-base text-gray-500">Your order #<%= @checkout_session.payment_intent.id %> is now available
-                for download.</p>
-
+    <div class="mt-6 text-center">
+        <h1 class="mt-2 mb-6 text-3xl font-semibold tracking-tight sm:text-5xl text-cor-verde">Parabéns pela sua escolha!</h1>
+        <h2 class="lg:text-lg">Pague seu PIX dentro de <span class='font-bold' id='timer'></span> para garantir sua compra.</h2>
         <dl class="mt-12 text-sm font-medium">
             <dt class="text-gray-900">Receipt</dt>
             <dd class="text-blue-600 mt-2">
@@ -201,6 +191,7 @@
                     </div>
     </div>
 
+    <script src="./js/timer.js"></script>    
 </body>
 
 </html>
