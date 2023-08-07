@@ -84,12 +84,12 @@
     <div class="text-center bg-cor-cinza">
         <img src="./assets/pix-logo.png" class="w-16 h-16 mx-auto mt-6 mb-1 p-1" alt="Logo do Pix">
 
-        <div class="justify-content-center d-none d-lg-flex mb-4" style="width: 100%">
+        <div class="justify-content-center d-none d-lg-flex mb-6 hidden md:block" style="width: 100%">
             <h3 class="text-center font-semibold text-xl">
                 Aponte a câmera do seu celular no código abaixo
             </h3>
         </div>
-        <img src="./assets/qr-code.png" class="mx-auto" alt="Imagem ilustrativa de QR Code">
+        <img src="./assets/qr-code.png" class="hidden md:block mx-auto mb-4" alt="Imagem ilustrativa de QR Code">
         <!-- Div para inserir a autom ação do QR Code -->
         <!-- <div class="d-flex justify-content-center mb-4">
             <div id="qrcode1" class="d-none d-lg-flex" style="margin: 10px auto 0 auto; display: table;"></div>
@@ -97,12 +97,7 @@
         <script>
             new QRCode(document.getElementById("qrcode1"), "00020101021226790014br.gov.bcb.pix2557brcode.starkinfra.com/v2/ddf39823f1c04ca49d41114e71ff5ac95204000053039865802BR5925Istpay Servicos de Pagame6009Nova Lima62070503***63041BA2");
         </script> -->
-        <div class="p-1 max-w-xs mx-auto mt-6 mb-6" style="border-radius:30px; background:#00bdae;">
-            <h4 class="text-xl text-white">
-                VALOR DE PAGAMENTO: <b class="font-semibold text-xl">R$ 49.90</b>
-            </h4>
-        </div>
-
+    
         <div class="justify-center lg:flex p-3 lg:px-0 w-full">
             <p class="description text-lg" style="font-size: 18px">
                 Para completar a sua compra, <span class="font-bold">copie o código abaixo</span> e <span
@@ -116,7 +111,7 @@
 
         <div class="mt-4">
             <button
-                class="btn mb-2 p-2 text-white font-semibold bg-cor-azul flex items-center w-1/2 justify-center mx-auto rounded"
+                class="btn mb-2 p-2 text-white font-semibold bg-cor-azul flex items-center drop-shadow-[0_4px_3px_rgba(0,0,0,0.25)] w-2/4 justify-center mx-auto rounded"
                 onclick="copyTextareaContent()">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-6 h-6 mr-2">
@@ -125,6 +120,12 @@
                 </svg>
                 COPIAR CÓDIGO
             </button>
+        </div>
+
+        <div class="p-1 max-w-xs mx-auto mt-8 mb-3" style="border-radius:30px; background:#00bdae;">
+            <h4 class="text-xl text-white">
+                VALOR DE PAGAMENTO: <b class="font-semibold text-xl">R$ 49.90</b>
+            </h4>
         </div>
 
         <!-- 4 passos -->
