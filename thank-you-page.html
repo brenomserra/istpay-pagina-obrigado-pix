@@ -9,6 +9,7 @@
     <!-- Mudar a URL com a automação necessária -->
     <title>Página de obrigado</title>
     <link rel="shortcut icon" href="./assets/favicon-istpay.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -38,7 +39,7 @@
     <header>
         <!-- Cor de fundo do navbar -->
         <nav class="bg-istpay-laranja">
-            <div class="max-w-screen-xl flex flex-wrap justify-between items-center mx-auto p-5">
+            <div class="max-w-screen-xl flex flex-wrap justify-between items-center mx-auto p-5 animated-text">
                 <!-- Referência do JS para reconhecer a logo do cliente -->
                 <a href="javascript:void(0)">
                     <img src="./assets/istpay-logo-branca-quadrada.png" class="w-16 h-16 mr-3" alt="Imagem do logotipo da loja" />
@@ -55,11 +56,11 @@
 
     <!-- Título, subtítulo com timer e aguardando pagamento -->
     <div class="mt-6 text-center">
-        <h1 class="mt-2 mb-6 text-3xl font-semibold tracking-tight sm:text-5xl text-cor-verde">Parabéns pela sua
+        <h1 class="mt-2 mb-6 text-3xl font-semibold tracking-tight sm:text-5xl text-cor-verde animated-text">Parabéns pela sua
             escolha!</h1>
-        <h2 class="mb-6 lg:text-lg">Pague seu PIX dentro de <span class='font-bold' id='timer'></span> para garantir sua
+        <h2 class="mb-6 lg:text-lg animate-slide-left">Pague seu PIX dentro de <span class='font-bold' id='timer'></span> para garantir sua
             compra.</h2>
-        <div class="p-2 max-w-[15rem] mx-auto" style="border-radius:30px; background: #ffc10754;">
+        <div class="p-2 max-w-[15rem] mx-auto animated-text" style="border-radius:30px; background: #ffc10754;">
             <h5 class="flex items-center justify-center" style="color:#87784b ;">
                 <li class="flex items-center">
                     <div role="status">
@@ -81,7 +82,7 @@
     </div>
 
     <!-- QR Code e 4 passos -->
-    <div class="text-center bg-cor-cinza">
+    <div class="text-center bg-cor-cinza animated-text">
         <img src="./assets/pix-logo.png" class="w-16 h-16 mx-auto mt-6 mb-1 p-1" alt="Logo do Pix">
 
         <div class="justify-content-center d-none d-lg-flex mb-6 hidden md:block" style="width: 100%">
